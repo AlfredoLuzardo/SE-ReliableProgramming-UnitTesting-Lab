@@ -6,6 +6,8 @@ SCHEMA = '''
 CREATE TABLE IF NOT EXISTS products (sku TEXT PRIMARY KEY, name TEXT NOT NULL, price REAL NOT NULL, stock INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS saved_cart (user_id TEXT NOT NULL, sku TEXT NOT NULL, quantity INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS orders (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id TEXT, amount REAL, status TEXT, request_id TEXT);
+-- Defect 8: one order per request id
+CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_request_id ON orders(request_id);
 '''
 
 
