@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+defaults:
+  run:
+    working-directory: Order_Processing_Starter
+
 jobs:
   test:
     runs-on: ubuntu-latest
