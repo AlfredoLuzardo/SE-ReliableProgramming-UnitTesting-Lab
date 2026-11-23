@@ -35,3 +35,11 @@
 
 - A repeated `request_id` always returns the first result, even if that payment was declined. A retry needs a new id.
 - Only one discount code can be used at a time.
+
+## Tests
+
+'''
+C:\Users\luzar\Documents\BCIT\SE\SE-ReliableProgramming-UnitTesting-Lab\Order_Processing_Starter>python -m pytest -q
+.............................                                                                                    [100%]
+29 passed in 0.54s
+'''
